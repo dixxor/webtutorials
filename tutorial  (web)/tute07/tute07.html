@@ -1,0 +1,128 @@
+<html> 
+    <head>
+        <title>tute07</title>
+    </head>
+
+    <body>
+        01<button id="pop"> CLICK here</button> <br><br>
+        02 click this buttton to calculate your grade
+        <button onclick="calculate()">calculate</button>
+        
+
+        <script language="javascript" type="text/javascript">
+            document.getElementById('pop').addEventListener('click',function(){alert("thhis is alert")})
+            
+            function calculate()
+            {
+                 tot=0
+                for(let i=1;i<=5;i++)
+                {
+                    const mark = parseFloat(prompt(`Enter Mark ${i}:`));
+                    tot += mark;
+                }
+
+                const avg =tot/5;
+
+                alert("total="+tot , "avg="+avg);
+
+                if(avg>30)
+                {
+                    alert("congrats!");
+                }
+                else
+                {
+                    alert("you need more practice");
+                }
+            }
+            
+            
+
+            
+            
+        </script>
+        <br>
+        <br>
+        03<button type="button" id="b" onmouseover="document.bgColor='red'", onmouseout="document.bgColor='white'">RED</button>
+        <button type="button" id="b" onmouseover="document.bgColor='green'", onmouseout="document.bgColor='white'">GREEN</button>
+        <button type="button" id="b" onmouseover="document.bgColor='blue'", onmouseout="document.bgColor='white'">BLUE</button>
+
+        <script language="javascript" type="text/javascript">
+
+            function circlearea()
+            {
+                const p = 22/7;
+                 const radius = parseFloat(prompt("enter the radius of the circule:"));
+                
+                 const area = p * radius * radius;
+                if(isNaN(radius))
+                {
+                    alert("invalid input");
+                }
+                else
+                {
+                    
+                    alert(`The area of the circle is: ${area.toFixed(2)}`);
+            
+                }
+            }
+        </script>
+        <br>
+        <br>
+        04 area of the circle 
+        <button type="button" onclick="circlearea()">calculate area of circle</button>
+
+        <script language="javascript" type="text/javascript">
+
+            function numonweek()
+            {
+                const num = parseInt(prompt("enter number from 1-7"));
+                
+                let day;
+
+                switch(num)
+                {
+                    case 1: day="monday";
+                    break;
+                    case 2: day="thuesday";
+                    break;
+                    case 3: day="wednesday";
+                    break;
+                    case 4: day="thursday";
+                    break;
+                    case 5: day="friday";
+                    break;
+                    case 6: day="saturday";
+                    break;
+                    case 7: day="sunday";
+                    break;
+                    default: "invalid number";
+                }
+                alert(`enterd number is ${day}`);
+               
+            }
+        </script>
+        <br>
+        <br>
+        05<button type="button" onclick="numonweek()">what is the day</button>
+    </body>
+
+    <script language="javascript" type="text/javascript">
+
+        function google()
+        {
+            const yes = confirm("you wanna visit google ?")
+            if(yes)
+            {
+                window.open('https://www.google.com');
+            }
+            else
+            {
+                alert("you decide to stay")
+            }
+        }
+
+    </script>
+    <br>
+    <br>
+    06 <button type="button" onclick="google()">google</button>
+</html>

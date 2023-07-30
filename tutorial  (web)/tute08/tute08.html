@@ -1,0 +1,123 @@
+<html>
+    <head>
+        <title>tute08</title>
+    </head>
+
+    <body>
+        <script language="javascript" type="text/javascript">
+
+            function dateandtime ()
+            {
+                const day = cdt.getdate()
+                const month = cdt.getmonth() +1
+                const year = cdt.getFullYear()
+                const hours = cdt.gethours()
+                const minutes = cdt.getminutes()
+                const seconds = cdt.getseconds()
+
+                const fdt =`${day}/${month}/${year} ${hours}:${ftc(minutes)}:${ftc(seconds)}`
+                document.getElementById("dateandtime").textContent=fdt
+            }
+            function ftconcept(component)
+            {
+                return component.tostring().padstar(2,'0')
+            }
+            setInterval(dateandtime(),1000)
+        </script>
+       01 <h5>current date and time </h5>
+        <p id="dateandtime"></p>
+
+        
+        <script>
+            function addRow() {
+                const tableBody = document.getElementById("myTable").getElementsByTagName('tbody')[0];
+                const newRow = tableBody.insertRow();
+    
+    
+                const cell1 = newRow.insertCell();
+                const cell2 = newRow.insertCell();
+                const cell3 = newRow.insertCell();
+    
+                cell1.innerHTML = "amal";
+                cell2.innerHTML = "20";
+                cell3.innerHTML = "sri lanka";
+            }
+        </script>
+
+            <br><br>
+
+            03<table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>City</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        
+            <button onclick="addRow()">Add Row</button>
+
+            <script language="javascript" type="text/javascript">
+
+        function removeSelectedItem() {
+            const dropdown = document.getElementById("myDropdown");
+            const selectedIndex = dropdown.selectedIndex;
+
+            if (selectedIndex !== -1) {
+                dropdown.remove(selectedIndex);
+            }
+        }
+
+        function removeAllItems() {
+            const dropdown = document.getElementById("myDropdown");
+
+            while (dropdown.options.length > 0) {
+                dropdown.remove(0);
+            }
+        }
+            </script>
+            <br>
+            <br>
+
+           04 Dropdown List:<br>
+            <select id="myDropdown">
+                <option value="apple">car</option>
+                <option value="banana">van</option>
+                <option value="orange">Obus</option>
+                <option value="grape">bike</option>
+            </select>
+        
+            <button onclick="removeSelectedItem()">Remove Selected Item</button>
+            <button onclick="removeAllItems()">Remove All Items</button>
+
+            <script language="javascript" type="text/javascript">
+            
+            function changeTableBorder() {
+            const table = document.getElementById("myTable");
+            table.style.border = "4px dashed red";
+           
+                }
+            </script>
+            <br><br>
+             05 Click the button to change the table border:<br>
+              <table id="myTable" border="1">
+                  <thead>
+                      <tr>
+                          <th>car</th>
+                          <th>van</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>toyota</td>
+                          <td>nissan</td>
+                      </tr>
+                  </tbody>
+              </table>
+          
+              <button onclick="changeTableBorder()">Change Border</button>
+        
+    </body>
+</html>
